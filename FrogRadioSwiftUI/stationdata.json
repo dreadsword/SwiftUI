@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1001,
+        "name": "KEXP",
+        "location": "Seattle",
+        "website": "http://kexp.org",
+     },
+     {
+        "id": 1002,
+        "name": "FrogRadio",
+        "location": "Tacoma",
+        "website": "http://frogradio.net",
+    }
+    
+]
