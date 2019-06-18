@@ -55,4 +55,5 @@ class Settings: BindableObject {
             didChange.send()
         }
     }
+    
 }

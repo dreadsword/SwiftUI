@@ -13,7 +13,7 @@ var colors: [Color] = [.blue,.purple,.pink,.red,.orange,.yellow,.green,.gray]
 struct ColorButton: View {
     
     var color:Color
-    @ObjectBinding var settings: Settings
+    @ObjectBinding var settings:Settings
     
     var body: some View {
         var selected = color == settings.tintColor ? true : false
@@ -42,8 +42,6 @@ struct TintPalette : View {
 
 
 #if DEBUG
-
-var settings:Settings = Settings()
 
 struct TintPalette_Previews : PreviewProvider {
     static var previews: some View {
