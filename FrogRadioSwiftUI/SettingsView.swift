@@ -18,18 +18,17 @@ struct SettingsView : View {
     var body: some View {
         
         VStack {
-            
             Text("Settings")
                 .bold()
                 .color(.green)
             
             List {
                 Section(header: Text("General Settings")) {
-                    Switch(title:"Auto Play", selected:true)
-                    Switch(title:"Show Album Art", selected:false)
-                    Switch(title:"Send Anonymous Usage Data", selected:true)
-                    Switch(title:"Levels Meter",selected:true)
-                    DoubleSwitch(title1:"Dark Mode", selected1: true, title2:"Follow System", selected2: true)
+                    Switch(title:"Auto Play", selected:settings.autoPlay)
+                    Switch(title:"Show Album Art", selected:settings.showArt)
+                    Switch(title:"Send Anonymous Usage Data", selected:settings.sendAnonData)
+                    Switch(title:"Levels Meter",selected:settings.levelsMeter)
+                    DoubleSwitch(title1:"Dark Mode", selected1: settings.darkMode, title2:"Follow System", selected2: settings.followSystemMode)
                     TintPalette(settings: settings)
                 }
                 Section(header: Text("Support")) {

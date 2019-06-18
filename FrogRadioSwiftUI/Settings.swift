@@ -16,9 +16,43 @@ class Settings: BindableObject {
     
     var tintColor = Color.red {
         didSet {
-            didChange.send(())
+            didChange.send()
         }
     }
     
+    var darkMode = false {
+        didSet {
+            didChange.send()
+        }
+    }
     
+    var autoPlay = true {
+        didSet {
+            didChange.send()
+        }
+    }
+    
+    var showArt = false {
+        didSet {
+            didChange.send()
+        }
+    }
+    
+    var sendAnonData = true {
+        didSet {
+            didChange.send()
+        }
+    }
+    
+    var levelsMeter = false {
+        didSet {
+            didChange.send()
+        }
+    }
+    
+    var followSystemMode = false {
+        didSet {
+            didChange.send()
+        }
+    }
 }

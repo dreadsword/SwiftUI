@@ -11,21 +11,25 @@ import SwiftUI
 struct Switch : View {
     
     var title:String
-    @State var selected = true
+    @State var selected:Bool
     
     var body: some View {
         HStack {
-            Toggle(isOn: .constant(selected)) {
+            Toggle(isOn: $selected) {
                 Text(title)
             }
         }
     }
 }
 
+
 #if DEBUG
+
+
 struct Switch_Previews : PreviewProvider {
+    
     static var previews: some View {
-        Switch(title:"Auto Play")
+        Switch(title:"Dark Mode",selected:settings.darkMode)
     }
 }
 #endif

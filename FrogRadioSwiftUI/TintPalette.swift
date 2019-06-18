@@ -17,7 +17,7 @@ struct ColorButton: View {
     
     var body: some View {
         var selected = color == settings.tintColor ? true : false
-        return Image(systemName: selected ? "o.ircle" : "circle.fill")
+        return Image(systemName: selected ? "o.circle" : "circle.fill")
             .foregroundColor(color)
             .tapAction {
                 selected.toggle()
