@@ -7,8 +7,14 @@
 //
 
 import SwiftUI
+import Combine
+
+
 
 struct SettingsView : View {
+    
+    @ObjectBinding var settings: Settings
+    
     var body: some View {
         
         VStack {
@@ -24,7 +30,7 @@ struct SettingsView : View {
                     Switch(title:"Send Anonymous Usage Data", selected:true)
                     Switch(title:"Levels Meter",selected:true)
                     DoubleSwitch(title1:"Dark Mode", selected1: true, title2:"Follow System", selected2: true)
-                    TintPalette()
+                    TintPalette(settings: settings)
                 }
                 Section(header: Text("Support")) {
                     Text("Example Row")
@@ -43,9 +49,10 @@ struct SettingsView : View {
 }
 
 #if DEBUG
+
 struct SettingsView_Previews : PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(settings: settings)
     }
 }
 #endif

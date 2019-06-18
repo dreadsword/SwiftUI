@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE5D4E5522B957C1006C4EB1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D4E5422B957C1006C4EB1 /* Settings.swift */; };
 		AEB13D3422B062F7004F7C78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB13D3322B062F7004F7C78 /* AppDelegate.swift */; };
 		AEB13D3622B062F7004F7C78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB13D3522B062F7004F7C78 /* SceneDelegate.swift */; };
 		AEB13D3822B062F7004F7C78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB13D3722B062F7004F7C78 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE5D4E5422B957C1006C4EB1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AEB13D3022B062F7004F7C78 /* FrogRadioSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrogRadioSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB13D3322B062F7004F7C78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEB13D3522B062F7004F7C78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				AEE3B59C22B83B5300B70264 /* TintPalette.swift */,
 				AEE3B59822B8384300B70264 /* Switch.swift */,
 				AEE3B59A22B83A3800B70264 /* DoubleSwitch.swift */,
+				AE5D4E5422B957C1006C4EB1 /* Settings.swift */,
 			);
 			path = FrogRadioSwiftUI;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				AEB13D4A22B06445004F7C78 /* Station.swift in Sources */,
 				AEB13D4E22B067C5004F7C78 /* StationData.swift in Sources */,
 				AEB13D3822B062F7004F7C78 /* ContentView.swift in Sources */,
+				AE5D4E5522B957C1006C4EB1 /* Settings.swift in Sources */,
 				AEE3B59B22B83A3800B70264 /* DoubleSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
