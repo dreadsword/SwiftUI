@@ -23,8 +23,8 @@ struct SettingsView : View {
                     Switch(title:"Show Album Art", selected:false)
                     Switch(title:"Send Anonymous Usage Data", selected:true)
                     Switch(title:"Levels Meter",selected:true)
-                    DoubleSwitch(title1:"Dark Mode", title2:"Follow System")
-                    TintPalette(selectedColor: .red)
+                    DoubleSwitch(title1:"Dark Mode", selected1: true, title2:"Follow System", selected2: true)
+                    TintPalette()
                 }
                 Section(header: Text("Support")) {
                     Text("Example Row")
