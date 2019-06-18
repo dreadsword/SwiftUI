@@ -13,14 +13,12 @@ var colors: [Color] = [.blue,.purple,.pink,.red,.orange,.yellow,.green,.gray]
 struct CircleToggleButton:View {
 
     var color: Color
-    @State var selected = true
+    @Binding var selected: Bool
     
     var body: some View {
-        if selected {
-            return Image(systemName: "circle").foregroundColor(color)
-        }
-        else {
-           return Image(systemName: "circle.fill").foregroundColor(color)
+			Button(actionL { self.selected.toggle() }) {
+				Image(systemName: self.selected ? "circle" : "circle.fill").foregroundColor(color)
+			}
         }
     }
 }
