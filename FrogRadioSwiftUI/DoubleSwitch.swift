@@ -11,14 +11,18 @@ import SwiftUI
 struct DoubleSwitch : View {
     
     var title1:String
+    @State var selected1:Bool
     var title2:String
+    @State var selected2:Bool
     
     var body: some View {
         HStack {
-            Toggle(isOn: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+            Toggle(isOn: $selected1) {
                 Text(title1)
             }
-            Toggle(isOn: /*@START_MENU_TOKEN@*/.constant(true)/*@END_MENU_TOKEN@*/) {
+            .disabled(selected2 ? true : false)
+            
+            Toggle(isOn: $selected2) {
                 Text(title2)
             }
         }
@@ -28,7 +32,7 @@ struct DoubleSwitch : View {
 #if DEBUG
 struct DoubleSwitch_Previews : PreviewProvider {
     static var previews: some View {
-        DoubleSwitch(title1: "A", title2: "B")
+        DoubleSwitch(title1: "A", selected1:true, title2: "B", selected2:false)
     }
 }
 #endif

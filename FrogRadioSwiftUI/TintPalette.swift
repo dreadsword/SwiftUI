@@ -10,35 +10,31 @@ import SwiftUI
 
 var colors: [Color] = [.blue,.purple,.pink,.red,.orange,.yellow,.green,.gray]
 
-struct CircleToggleButton:View {
 
-    var color: Color
-    @State var selected = true
+var selectedColor:Color = .red
+
+struct ColorButton: View {
+    
+    var color:Color
+    @State var selected:Bool
     
     var body: some View {
-        if selected {
-            return Image(systemName: "circle").foregroundColor(color)
-        }
-        else {
-           return Image(systemName: "circle.fill").foregroundColor(color)
+        Image(systemName: selected ? "circle" : "circle.fill")
+        .foregroundColor(color)
+            .tapAction {
+                self.selected.toggle()
+                selectedColor = self.color
         }
     }
 }
 
 struct TintPalette : View {
     
-    var selectedColor:Color
-    
     var body: some View {
         HStack {
             Text("Tint")
             ForEach(colors.identified(by: \.self)) { color in
-                if (color == self.selectedColor) {
-                    CircleToggleButton(color: color, selected:true)
-                }
-                else {
-                    CircleToggleButton(color: color, selected:false)
-                }
+                ColorButton(color:color, selected:color == selectedColor ? true : false)
             }
         }
     }
@@ -47,7 +43,7 @@ struct TintPalette : View {
 #if DEBUG
 struct TintPalette_Previews : PreviewProvider {
     static var previews: some View {
-        TintPalette(selectedColor: .blue)
+        TintPalette()
     }
 }
 #endif
