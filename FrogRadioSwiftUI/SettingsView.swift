@@ -29,15 +29,17 @@ struct SettingsView : View {
                     TintPalette(settings:settings)
                 }
                 Section(header: Text("Support").bold()) {
-                    Link(linkName: "FrogRadio Website", linkURL: URL(fileURLWithPath: "aa"))
-                    Link(linkName: "Support", linkURL: URL(fileURLWithPath: "bb"))
-                    Link(linkName: "Privacy Policy", linkURL: URL(fileURLWithPath: "cc"))
-                    Link(linkName: "Email Support Request", linkURL: URL(fileURLWithPath: "dd"))
+                    NavigationButton(destination: About()) {
+                        Text("About").color(.blue)
+                    }
+                    Link(linkName: "FrogRadio Website", linkURL: URL(fileURLWithPath: "https://frogradio.net"))
+                    Link(linkName: "Support", linkURL: URL(fileURLWithPath: "https://frogradio.net/support"))
+                    Link(linkName: "Privacy Policy", linkURL: URL(fileURLWithPath: "https://frogradio.net/privacy/en"))
+                    Link(linkName: "Email Support Request", linkURL: URL(fileURLWithPath: "mailto:support@frogradio.net?Subject=Support Request"))
                 }
                 Section(header: Text("Actions").bold()) {
-                    Text("Example Row")
-                    Text("Example Row")
-                    Text("Example Row")
+                    Text("Add A Station")
+                    Text("Delete iCloud Data")
                 }
             }
             .listStyle(.grouped)

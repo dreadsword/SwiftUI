@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0BAB8622B9AD3A00217851 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0BAB8522B9AD3A00217851 /* About.swift */; };
 		AE5D4E5522B957C1006C4EB1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5D4E5422B957C1006C4EB1 /* Settings.swift */; };
 		AEB13D3422B062F7004F7C78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB13D3322B062F7004F7C78 /* AppDelegate.swift */; };
 		AEB13D3622B062F7004F7C78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB13D3522B062F7004F7C78 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE0BAB8522B9AD3A00217851 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		AE5D4E5422B957C1006C4EB1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AEB13D3022B062F7004F7C78 /* FrogRadioSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrogRadioSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB13D3322B062F7004F7C78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				AEB13D4D22B067C5004F7C78 /* StationData.swift */,
 				AEB13D4F22B06814004F7C78 /* stationdata.json */,
 				AEE3B59622B8362800B70264 /* SettingsView.swift */,
+				AE0BAB8522B9AD3A00217851 /* About.swift */,
 				AED798FB22B9755700A5EFEF /* Link.swift */,
 				AEE3B59C22B83B5300B70264 /* TintPalette.swift */,
 				AEE3B59822B8384300B70264 /* Switch.swift */,
@@ -181,6 +184,7 @@
 				AEE3B59722B8362800B70264 /* SettingsView.swift in Sources */,
 				AEE3B59922B8384300B70264 /* Switch.swift in Sources */,
 				AED798FC22B9755700A5EFEF /* Link.swift in Sources */,
+				AE0BAB8622B9AD3A00217851 /* About.swift in Sources */,
 				AEB13D3422B062F7004F7C78 /* AppDelegate.swift in Sources */,
 				AEB13D3622B062F7004F7C78 /* SceneDelegate.swift in Sources */,
 				AEB13D4C22B0655B004F7C78 /* StationRow.swift in Sources */,
