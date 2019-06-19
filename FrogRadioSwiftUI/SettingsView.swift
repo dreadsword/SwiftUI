@@ -9,8 +9,6 @@
 import SwiftUI
 import Combine
 
-
-
 struct SettingsView : View {
     
     @ObjectBinding var settings: Settings
@@ -27,13 +25,14 @@ struct SettingsView : View {
                     TintPalette(settings:settings)
                 }
                 Section(header: Text("Support").bold()) {
+                    
                     NavigationButton(destination: About(settings: settings)) {
                         Text("About").color(.blue)
                     }
-                    Link(linkName: "FrogRadio Website", linkURL: URL(fileURLWithPath: "https://frogradio.net"))
-                    Link(linkName: "Support", linkURL: URL(fileURLWithPath: "https://frogradio.net/support"))
-                    Link(linkName: "Privacy Policy", linkURL: URL(fileURLWithPath: "https://frogradio.net/privacy/en"))
-                    Link(linkName: "Email Support Request", linkURL: URL(fileURLWithPath: "mailto:support@frogradio.net?Subject=Support Request"))
+                    link(title:"FrogRadio Website", url:"https://frogradio.net")
+                    link(title:"Support", url:"https://frogradio.net/support")
+                    link(title:"Privacy Policy", url:"https://frogradio.net/privacy/en")
+                    link(title:"Email Support Request", url:"mailto:support@frogradio.net?Subject=Support Request")
                 }
                 Section(header: Text("Actions").bold()) {
                     Text("Add A Station")

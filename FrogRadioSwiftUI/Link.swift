@@ -8,32 +8,39 @@
 
 import SwiftUI
 import UIKit
+import WebKit
 
-struct web: View {
+
+struct WebView : UIViewRepresentable {
     
-    var url:URL
+    let request: URLRequest
     
- var body: some View {
-    Text("aa")
+    func makeUIView(context: Context) -> WKWebView  {
+        return WKWebView()
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.load(request)
     }
 }
 
-
-struct Link : View {
+struct showlink: View {
     
-    var linkName: String
-    var linkURL: URL
+    var urlstr:String
     
     var body: some View {
-            Text(linkName).color(.blue).underline()
+        WebView(request: URLRequest(url: URL(string: urlstr)!))
     }
 }
 
-#if DEBUG
-struct Link_Previews : PreviewProvider {
-    static var previews: some View {
-        Link(linkName: "link",
-             linkURL: URL(fileURLWithPath: "https://frogradio.net"))
+struct link: View {
+    
+    var title:String
+    var url:String
+    
+    var body: some View {
+        NavigationButton(destination: showlink(urlstr:url) ) {
+            Text(title).color(.blue).underline()
+        }
     }
 }
-#endif
