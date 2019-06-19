@@ -17,9 +17,7 @@ struct SettingsView : View {
     
     var body: some View {
         VStack {
-            Text("Settings")
-               .bold()
-               .color(settings.tintColor)
+            
             List {
                 Section(header: Text("General Settings").bold()) {
                     Switch(title:"Show Album Art", selected:settings.showArt)
@@ -29,7 +27,7 @@ struct SettingsView : View {
                     TintPalette(settings:settings)
                 }
                 Section(header: Text("Support").bold()) {
-                    NavigationButton(destination: About()) {
+                    NavigationButton(destination: About(settings: settings)) {
                         Text("About").color(.blue)
                     }
                     Link(linkName: "FrogRadio Website", linkURL: URL(fileURLWithPath: "https://frogradio.net"))
@@ -44,6 +42,7 @@ struct SettingsView : View {
             }
             .listStyle(.grouped)
         }
+        .navigationBarTitle(Text("Settings"))
     }
 }
 
@@ -51,7 +50,15 @@ struct SettingsView : View {
 var settings: Settings = Settings()
 struct SettingsView_Previews : PreviewProvider {
     static var previews: some View {
-        SettingsView(settings: settings)
+        Group {
+            NavigationView {
+                SettingsView(settings: settings)
+            }.colorScheme(.light)
+            
+            NavigationView {
+                SettingsView(settings: settings)
+            }.colorScheme(.dark)
+        }
     }
 }
 #endif

@@ -7,6 +7,17 @@
 //
 
 import SwiftUI
+import UIKit
+
+struct web: View {
+    
+    var url:URL
+    
+ var body: some View {
+    Text("aa")
+    }
+}
+
 
 struct Link : View {
     
@@ -14,16 +25,15 @@ struct Link : View {
     var linkURL: URL
     
     var body: some View {
-        Text(linkName)
-        .color(.blue)
-        .underline()
+            Text(linkName).color(.blue).underline()
     }
 }
 
 #if DEBUG
 struct Link_Previews : PreviewProvider {
     static var previews: some View {
-        Link(linkName: "link", linkURL: URL(fileURLWithPath: "https://frogradio.net"))
+        Link(linkName: "link",
+             linkURL: URL(fileURLWithPath: "https://frogradio.net"))
     }
 }
 #endif
