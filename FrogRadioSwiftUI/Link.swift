@@ -33,7 +33,7 @@ struct showlink: View {
     }
 }
 
-struct link: View {
+struct Link: View {
     
     var title:String
     var url:String
