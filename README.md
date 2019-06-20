@@ -1,4 +1,3 @@
 # SwiftUI
-SwiftUI experimenting
 
-Working on remaking the FrogRadio UI in SwiftUI.
+Working on remaking the [FrogRadio](https://frogradio.net) UI in SwiftUI.
