@@ -28,11 +28,11 @@ struct ColorButton: View {
 
 struct TintPalette : View {
     
-    @ObjectBinding var settings: Settings
-    
+    @EnvironmentObject var settings: Settings
+
     var body: some View {
         HStack {
-            Text("Tint")
+            Text("Tint").color(settings.tintColor)
             ForEach(colors.identified(by: \.self)) { color in
                 ColorButton(color:color,settings:self.settings)
             }
@@ -45,7 +45,7 @@ struct TintPalette : View {
 
 struct TintPalette_Previews : PreviewProvider {
     static var previews: some View {
-        TintPalette(settings:settings)
+        TintPalette()
     }
 }
 #endif

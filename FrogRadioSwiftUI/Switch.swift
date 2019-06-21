@@ -13,10 +13,12 @@ struct Switch : View {
     var title:String
     @State var selected:Bool
     
+    @EnvironmentObject var settings: Settings
+    
     var body: some View {
         HStack {
             Toggle(isOn: $selected) {
-                Text(title)
+                Text(title).color(settings.tintColor)
             }
         }
     }

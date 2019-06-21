@@ -10,13 +10,14 @@ import SwiftUI
 
 struct About : View {
     
-    @ObjectBinding var settings: Settings
+    @EnvironmentObject var settings: Settings
+
     
     var body: some View {
         VStack {
             Group {
                 Image("TheFrog")
-                Text("Frog Icon By:").color(.green).bold()
+                Text("Frog Icon By:").color(settings.tintColor).bold()
                 NavigationButton(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
                     Text("Brad Ellis").color(.blue).underline()
                 }
@@ -24,7 +25,7 @@ struct About : View {
             }
             
             Group {
-                Text("Open Source Code Used:").color(.green).bold()
+                Text("Open Source Code Used:").color(settings.tintColor).bold()
                 NavigationButton(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
                     Text("FreeStreamer").color(.blue).underline()
                 }
@@ -35,8 +36,8 @@ struct About : View {
             }
 
             Group {
-                Text("FrogRadio 1.0.14 (1300)").color(.green).bold()
-                Text("Copyright 2019 Shy Frog Productions LLC").color(.green).font(.subheadline)
+                Text("FrogRadio 1.0.14 (1300)").color(settings.tintColor).bold()
+                Text("Copyright 2019 Shy Frog Productions LLC").color(settings.tintColor).font(.subheadline)
                 NavigationButton(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
                     Text("Made in Tacoma").color(.blue).underline()
                 }
@@ -51,7 +52,7 @@ struct About : View {
 struct About_Previews : PreviewProvider {
     static var previews: some View {
        NavigationView {
-            About(settings: settings)
+            About()
         }
     }
 }

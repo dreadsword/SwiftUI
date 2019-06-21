@@ -11,8 +11,8 @@ import Combine
 
 struct SettingsView : View {
     
-    @ObjectBinding var settings: Settings
-    
+    @EnvironmentObject var settings: Settings
+
     var body: some View {
         VStack {
             Text("Settings").font(.largeTitle).color(settings.tintColor)
@@ -22,11 +22,11 @@ struct SettingsView : View {
                     Switch(title:"Send Anonymous Usage Data", selected:settings.sendAnonData)
                     Switch(title:"Levels Meter",selected:settings.levelsMeter)
                     DoubleSwitch(title1:"Dark Mode", selected1: settings.darkMode, title2:"Follow System", selected2: settings.followSystemMode)
-                    TintPalette(settings:settings)
+                    TintPalette()
                 }
                 Section(header: Text("Support").bold()) {
                     
-                    NavigationButton(destination: About(settings: settings)) {
+                    NavigationButton(destination: About()) {
                         Text("About").color(.blue)
                     }
                     Link(title:"FrogRadio Website", url:"https://frogradio.net")
@@ -46,12 +46,11 @@ struct SettingsView : View {
 }
 
 #if DEBUG
-var settings: Settings = Settings()
 struct SettingsView_Previews : PreviewProvider {
     static var previews: some View {
        Group {
             NavigationView {
-                SettingsView(settings: settings)
+                SettingsView()
             }.colorScheme(.light)
         }
     }
