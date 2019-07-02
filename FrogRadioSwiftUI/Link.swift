@@ -39,7 +39,7 @@ struct Link: View {
     var url:String
     
     var body: some View {
-        NavigationButton(destination: showlink(urlstr:url) ) {
+        NavigationLink(destination: showlink(urlstr:url) ) {
             Text(title).color(.blue).underline()
         }
     }

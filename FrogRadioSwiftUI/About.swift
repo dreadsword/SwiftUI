@@ -18,7 +18,7 @@ struct About : View {
             Group {
                 Image("TheFrog")
                 Text("Frog Icon By:").color(settings.tintColor).bold()
-                NavigationButton(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
+                NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
                     Text("Brad Ellis").color(.blue).underline()
                 }
                 Spacer()
@@ -26,10 +26,10 @@ struct About : View {
             
             Group {
                 Text("Open Source Code Used:").color(settings.tintColor).bold()
-                NavigationButton(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
+                NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
                     Text("FreeStreamer").color(.blue).underline()
                 }
-                NavigationButton(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
+                NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
                     Text("FMDB").color(.blue).underline()
                 }
                 Spacer()
@@ -38,7 +38,7 @@ struct About : View {
             Group {
                 Text("FrogRadio 1.0.14 (1300)").color(settings.tintColor).bold()
                 Text("Copyright 2019 Shy Frog Productions LLC").color(settings.tintColor).font(.subheadline)
-                NavigationButton(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
+                NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
                     Text("Made in Tacoma").color(.blue).underline()
                 }
                  Spacer()

@@ -26,7 +26,7 @@ struct SettingsView : View {
                 }
                 Section(header: Text("Support").bold()) {
                     
-                    NavigationButton(destination: About()) {
+                    NavigationLink(destination: About()) {
                         Text("About").color(.blue)
                     }
                     Link(title:"FrogRadio Website", url:"https://frogradio.net")
