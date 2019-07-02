@@ -15,7 +15,7 @@ struct SettingsView : View {
 
     var body: some View {
         VStack {
-            Text("Settings").font(.largeTitle).color(settings.tintColor)
+           // Text("Settings").font(.largeTitle).color(settings.tintColor)
             List {
                 Section(header: Text("General Settings").bold()) {
                     Switch(title:"Show Album Art", selected:settings.showArt)
@@ -51,7 +51,7 @@ struct SettingsView_Previews : PreviewProvider {
        Group {
             NavigationView {
                 SettingsView().environmentObject(Settings())
-            }.colorScheme(.light)
+            }.colorScheme(.dark)
         }
     }
 }

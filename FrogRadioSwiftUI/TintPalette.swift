@@ -32,7 +32,7 @@ struct TintPalette : View {
 
     var body: some View {
         HStack {
-            Text("Tint").color(settings.tintColor)
+            Text("Tint").color(.primary)
             ForEach(colors.identified(by: \.self)) { color in
                 ColorButton(color:color,settings:self.settings)
             }
