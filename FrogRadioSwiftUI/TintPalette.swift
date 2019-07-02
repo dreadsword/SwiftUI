@@ -45,7 +45,7 @@ struct TintPalette : View {
 
 struct TintPalette_Previews : PreviewProvider {
     static var previews: some View {
-        TintPalette()
+        TintPalette().environmentObject(Settings())
     }
 }
 #endif

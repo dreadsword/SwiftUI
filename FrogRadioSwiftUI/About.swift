@@ -52,7 +52,7 @@ struct About : View {
 struct About_Previews : PreviewProvider {
     static var previews: some View {
        NavigationView {
-            About()
+            About().environmentObject(Settings())
         }
     }
 }

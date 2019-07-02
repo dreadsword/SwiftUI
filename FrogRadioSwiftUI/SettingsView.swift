@@ -50,7 +50,7 @@ struct SettingsView_Previews : PreviewProvider {
     static var previews: some View {
        Group {
             NavigationView {
-                SettingsView()
+                SettingsView().environmentObject(Settings())
             }.colorScheme(.light)
         }
     }

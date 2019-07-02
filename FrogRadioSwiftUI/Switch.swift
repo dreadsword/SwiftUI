@@ -31,7 +31,7 @@ struct Switch : View {
 struct Switch_Previews : PreviewProvider {
     
     static var previews: some View {
-        Switch(title:"Dark Mode",selected:false)
+        Switch(title:"Dark Mode",selected:false).environmentObject(Settings())
     }
 }
 #endif

@@ -35,7 +35,7 @@ struct DoubleSwitch : View {
 #if DEBUG
 struct DoubleSwitch_Previews : PreviewProvider {
     static var previews: some View {
-        DoubleSwitch(title1: "A", selected1:true, title2: "B", selected2:false)
+        DoubleSwitch(title1: "A", selected1:true, title2: "B", selected2:false).environmentObject(Settings())
     }
 }
 #endif
