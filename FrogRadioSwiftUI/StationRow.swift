@@ -19,11 +19,11 @@ struct StationRow : View {
                         Text(station.name)
                             .font(.title)
                             .fontWeight(.bold)
-                            .color(.green)
+                            .foregroundColor(.green)
                         Text(station.location)
                             .font(.subheadline)
                             .fontWeight(.light)
-                            .color(.gray)
+                            .foregroundColor(.gray)
                     }
                 }
         }

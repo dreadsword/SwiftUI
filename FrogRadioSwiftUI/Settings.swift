@@ -11,6 +11,8 @@ import SwiftUI
 import Combine
 
 class Settings: BindableObject {
+    typealias PublisherType = <#type#>
+    
     
     var didChange = PassthroughSubject<Void, Never>()
     

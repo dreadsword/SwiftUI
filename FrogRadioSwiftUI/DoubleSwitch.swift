@@ -21,12 +21,12 @@ struct DoubleSwitch : View {
     var body: some View {
         HStack {
             Toggle(isOn: $selected1) {
-                Text(title1).color(.primary)
+                Text(title1).foregroundColor(.primary)
             }
             .disabled(selected2 ? true : false)
             
             Toggle(isOn: $selected2) {
-                Text(title2).color(.primary)
+                Text(title2).foregroundColor(.primary)
             }
         }
     }

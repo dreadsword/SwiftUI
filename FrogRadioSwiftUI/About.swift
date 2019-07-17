@@ -17,29 +17,29 @@ struct About : View {
         VStack {
             Group {
                 Image("TheFrog")
-                Text("Frog Icon By:").color(.primary).bold()
+                Text("Frog Icon By:").foregroundColor(.primary).bold()
                 NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
-                    Text("Brad Ellis").color(.blue).underline()
+                    Text("Brad Ellis").foregroundColor(.blue).underline()
                 }
                 Spacer()
             }
             
             Group {
-                Text("Open Source Code Used:").color(.primary).bold()
+                Text("Open Source Code Used:").foregroundColor(.primary).bold()
                 NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
-                    Text("FreeStreamer").color(.blue).underline()
+                    Text("FreeStreamer").foregroundColor(.blue).underline()
                 }
                 NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
-                    Text("FMDB").color(.blue).underline()
+                    Text("FMDB").foregroundColor(.blue).underline()
                 }
                 Spacer()
             }
 
             Group {
-                Text("FrogRadio 1.0.14 (1300)").color(.primary).bold()
-                Text("Copyright 2019 Shy Frog Productions LLC").color(.primary).font(.subheadline)
+                Text("FrogRadio 1.0.14 (1300)").foregroundColor(.primary).bold()
+                Text("Copyright 2019 Shy Frog Productions LLC").foregroundColor(.primary).font(.subheadline)
                 NavigationLink(destination: showlink(urlstr:"https://frogradio.net/privacy/en") ) {
-                    Text("Made in Tacoma").color(.blue).underline()
+                    Text("Made in Tacoma").foregroundColor(.blue).underline()
                 }
                  Spacer()
             }

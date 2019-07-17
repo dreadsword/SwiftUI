@@ -18,7 +18,7 @@ struct Switch : View {
     var body: some View {
         HStack {
             Toggle(isOn: $selected) {
-                Text(title).color(.primary )
+                Text(title).foregroundColor(.primary )
             }
         }
     }
