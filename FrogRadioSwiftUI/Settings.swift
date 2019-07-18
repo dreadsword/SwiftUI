@@ -11,50 +11,48 @@ import SwiftUI
 import Combine
 
 class Settings: BindableObject {
-    typealias PublisherType = <#type#>
     
-    
-    var didChange = PassthroughSubject<Void, Never>()
+    var willChange = PassthroughSubject<Void, Never>()
     
     var tintColor = Color.red {
-        didSet {
-            didChange.send()
+        willSet {
+            willChange.send()
         }
     }
     
     var darkMode = false {
-        didSet {
-            didChange.send()
+        willSet {
+            willChange.send()
         }
     }
     
     var autoPlay = true {
-        didSet {
-            didChange.send()
+        willSet {
+            willChange.send()
         }
     }
     
     var showArt = false {
-        didSet {
-            didChange.send()
+        willSet {
+            willChange.send()
         }
     }
     
     var sendAnonData = true {
-        didSet {
-            didChange.send()
+        willSet {
+            willChange.send()
         }
     }
     
     var levelsMeter = false {
-        didSet {
-            didChange.send()
+        willSet {
+            willChange.send()
         }
     }
     
     var followSystemMode = false {
-        didSet {
-            didChange.send()
+        willSet {
+            willChange.send()
         }
     }
     
