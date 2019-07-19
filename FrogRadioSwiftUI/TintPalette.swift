@@ -34,8 +34,8 @@ struct TintPalette : View {
         HStack {
             Text("Tint").foregroundColor(.primary)
             Spacer()
-            ForEach(colors.identified(by: \.self)) { color in
-                ColorButton(color:color,settings:self.settings)
+                ForEach(0..<colors.count) { index in
+                    ColorButton(color:colors[index],settings:self.settings)
             }
         }
     }
