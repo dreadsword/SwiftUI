@@ -39,7 +39,7 @@ struct SettingsView : View {
                     Text("Delete iCloud Data")
                 }
             }
-            .listStyle(.grouped)
+            .listStyle(GroupedListStyle())
         }
         .navigationBarTitle(Text("Settings"))
     }

@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-class Settings: BindableObject {
+class Settings: Combine.ObservableObject {
     
     var willChange = PassthroughSubject<Void, Never>()
     

@@ -13,13 +13,13 @@ var colors: [Color] = [.blue,.purple,.pink,.red,.orange,.yellow,.green,.gray]
 struct ColorButton: View {
     
     var color:Color
-    @ObjectBinding var settings:Settings
+    @ObservedObject var settings:Settings
     
     var body: some View {
         var selected = color == settings.tintColor ? true : false
         return Image(systemName: selected ? "o.circle" : "circle.fill")
             .foregroundColor(color)
-            .tapAction {
+            .onTapGesture {
                 selected.toggle()
                 self.settings.tintColor = self.color
         }
